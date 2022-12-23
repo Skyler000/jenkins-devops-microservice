@@ -2,8 +2,10 @@
 pipeline {
 	//agent any
 	//agent { docker { image 'maven:latest'} }
-	agent { docker { image 'node:13.8'} }
-	stages{
+	agent {
+		docker { image 'node:16.13.1-alpine' }
+	} 
+	stages {
 		stage('Build'){
 			steps {
 				//sh 'mvn --version'
