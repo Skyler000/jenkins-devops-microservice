@@ -4,7 +4,6 @@ pipeline {
 	//agent { docker { image 'maven:latest'} }
 	agent {
 		docker { 
-			label 'docker'
 			image 'node:16.13.1-alpine'
 		}
 	} 
