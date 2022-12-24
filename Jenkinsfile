@@ -7,11 +7,16 @@ pipeline {
 	// 		image 'node:16.13.1-alpine'
 	// 	}
 	// } 
+	environment { 
+		dockerHome = tool 'myDocker'
+		mavenHome = tool 'myMaven'
+		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	}
 	stages {
 		stage('Build'){
 			steps {
-				// sh 'mvn --version'
-				// sh 'node --version'
+				sh 'mvn --version'
+				sh 'node --version'
 				echo 'New Build'
 				echo "PATH - $PATH"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
