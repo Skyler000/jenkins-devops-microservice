@@ -24,7 +24,7 @@ pipeline {
 				echo "JOB_NAME - $env.JOB_NAME"
 				echo "BUILD_TAG - $env.BUILD_TAG"
 				echo "BUILD_URL - $env.BUILD_URL"
-				sh git 'https://github.com/Skyler000/odoo15-docker.git'
+				git 'https://github.com/Skyler000/odoo15-docker.git'
 
 				
 
